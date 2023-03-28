@@ -106,3 +106,7 @@ CV Rank = RANK.EQ(Stock[coefficient of variation],Stock[coefficient of variation
 
 XYZ ? = if(Stock[CV Rank]<=0.2*MAX(Stock[CV Rank]),"X [uniform Demond]", if(Stock[CV Rank]<=0.5*MAX(Stock[CV Rank]),"Y [Variable Demond]",
 " Z [Uncertain Demonds]"))
+
+#### Dashboard Preview 
+![Dashboard](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Screenshot%202023-03-28%20074259.png)
+
