@@ -30,10 +30,40 @@ E: Essential inventory: important products in minimal quantities
 D: Desirable inventory: optional products for the business
 
 ### 4. SDE analysis
-4. SDE analysis is a method of categorizing inventory based on its availability and lead time:
+SDE analysis is a method of categorizing inventory based on its availability and lead time:
 Scarce inventory is imported and has a longer lead time, making it harder to acquire. This inventory is critical to the business and its scarcity can lead to delays and disruptions in operations.
 Difficult inventory is still important to the business, but it requires more effort and time to secure. This inventory has a lead time of over 14 days but less than 6 months.
 Easily available inventory is readily accessible and can be quickly obtained. This inventory is usually less critical to the business and can be easily replaced or substituted.
 
 ### 5. Safety stock analysis
 Safety stock analysis is a method of calculating the amount of additional inventory that should be held in reserve to prevent stockouts. This analysis takes into account the lead time for replenishing inventory, the expected demand during that lead time, and the desired level of customer service.
+
+## Requirements and Problem Statements for this Projects 
+
+1. ABC Analysis
+2. Inventory Turn Over Ratio 
+3. Safety Stock Level 
+4. Reorder Level
+5. Stock Status
+6. VED Analysis 
+
+## DAX Formula
+
+#### ABC Analysis 
+
+Annual Sales Quantity 2020 = CALCULATE(
+    SUM('Past Orders'[Order Quantity]),
+    FILTER('Past Orders',
+    'Past Orders'[SKU ID] ='Stock'[SKU ID] &&
+    'Past Orders'[Date].[Year] = 2020))
+    
+Revenue Share % = 100*'Stock'[Annual Revenue]/SUM('Stock'[Annual Revenue])+0
+
+Cumulative Shares = CALCULATE(
+    SUM('Stock'[Revenue Share %]),
+    FILTER(Stock,
+    Stock[Revenue Share %] >=EARLIER(Stock[Revenue Share %])))
+    
+ABC Analysis = IF(Stock[Cumulative Shares]<=70,"A [High]", IF(Stock[Cumulative Shares]<=90,"B [Medium]","C [Less]"))
+
+ABC Rank = RANK.EQ(Stock[Cumulative Shares],Stock[Cumulative Shares],ASC)
