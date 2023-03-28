@@ -49,7 +49,7 @@ Safety stock analysis is a method of calculating the amount of additional invent
 
 ## DAX Formula
 
-#### ABC Analysis 
+### ABC Analysis 
 
 Annual Sales Quantity 2020 = CALCULATE(
     SUM('Past Orders'[Order Quantity]),
@@ -70,7 +70,7 @@ ABC Rank = RANK.EQ(Stock[Cumulative Shares],Stock[Cumulative Shares],ASC)
 
 ![Parito Example of ABC Analysis](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Parito%20example-%20ABC%20Analysis.png)
 
-#### Inventory Turn Over Ratio
+### Inventory Turn Over Ratio
 
 A ratio that measures the number of times inventory is sold and replaced over a period of time. It's calculated as Cost of Goods Sold (COGS) divided by Average Inventory.
 
@@ -78,9 +78,10 @@ Value in WH = Stock[Current Stock Quantity]*Stock[Unit Price]
 
 Inventory TurnOver Ratio = SUM(Stock[Annual Revenue])/SUM(Stock[Value in WH])
 
+
 ![INVENTORY TURNOVER RATIO](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Inventory%20turn%20over%20ratio.png)
 
-#### Safety Stock Level 
+### Safety Stock Level 
 
 Peak Weakly Demands = CALCULATE(
     MAX('Weekly Demond Sheet'[Weekly Demonds]),
@@ -103,6 +104,8 @@ ReOrder Points = Stock[Safety Stock] +(Stock[Average Weekly Demonds] * Stock[Ave
 #### Stock Status 
 
 Stock Status = IF(Stock[Current Stock Quantity] = 0, "Out of Stock",IF(Stock[Need for Order]= "YES","Below Reorder Points","In Stock"))
+
+![](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Stock%20Status.png)
 
 #### VED Analysis
 
