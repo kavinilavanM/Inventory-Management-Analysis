@@ -4,7 +4,7 @@ Inventory management data analysis refers to the process of using data to unders
 
 Inventory analysis is essential for businesses to manage their inventory effectively and efficiently. By analyzing inventory levels, demand patterns, and supply chain performance, businesses can identify potential risks and challenges and take proactive measures to prevent stockouts or overstocking.Effective inventory analysis also helps businesses to optimize their supply chain operations. By identifying inefficiencies and bottlenecks in the supply chain, businesses can make improvements to increase efficiency, reduce costs, and improve customer satisfaction.Furthermore, inventory analysis can help businesses to increase profitability by minimizing inventory holding costs, reducing stockouts, and optimizing product pricing and promotions based on demand patterns.
 
-ABC analysis is a method that helps businesses categorize their inventory based on the Pareto principle, also known as the 80/20 rule. This principle states that roughly 80% of the effects come from 20% of the causes. In the context of inventory management, it means that a small percentage of the products in your inventory account for a large percentage of your sales and profits.
+1. ABC analysis is a method that helps businesses categorize their inventory based on the Pareto principle, also known as the 80/20 rule. This principle states that roughly 80% of the effects come from 20% of the causes. In the context of inventory management, it means that a small percentage of the products in your inventory account for a large percentage of your sales and profits.
 
 By performing an ABC analysis, businesses can identify their most valuable products (A-items) and allocate more resources to managing them, such as optimizing their inventory levels, monitoring their demand closely, and improving their supply chain processes. In contrast, they can also identify their least valuable products (C-items) and consider reducing their inventory levels or discontinuing them altogether.
 
@@ -20,12 +20,13 @@ H: Inventory with a high price per unit.
 M: Inventory with a medium price per unit.
 L: Inventory with a low price per unit.
 HML analysis can also be combined with other inventory analysis methods, such as ABC analysis, to provide a more comprehensive understanding of inventory performance and needs. By using multiple methods, businesses can identify patterns and trends in their inventory and make more informed decisions about inventory management strategies.
-3 VED analysis helps businesses prioritize their inventory based on their importance and impact on the overall operations. By categorizing inventory as vital, essential, or desirable, businesses can allocate resources and manage inventory levels more effectively. For example, a business may want to focus on keeping its vital inventory in stock at all times, while only ordering desirable inventory when necessary to avoid overstocking. Additionally, VED analysis can help businesses identify potential risks and areas for improvement in their inventory management, such as identifying items that may need to be reordered more frequently to maintain adequate stock levels.
+
+3. VED analysis helps businesses prioritize their inventory based on their importance and impact on the overall operations. By categorizing inventory as vital, essential, or desirable, businesses can allocate resources and manage inventory levels more effectively. For example, a business may want to focus on keeping its vital inventory in stock at all times, while only ordering desirable inventory when necessary to avoid overstocking. Additionally, VED analysis can help businesses identify potential risks and areas for improvement in their inventory management, such as identifying items that may need to be reordered more frequently to maintain adequate stock levels.
 V: Vital inventory: products needed constantly for business operations
 E: Essential inventory: important products in minimal quantities
 D: Desirable inventory: optional products for the business
 
-4 SDE analysis is a method of categorizing inventory based on its availability and lead time:
+4. SDE analysis is a method of categorizing inventory based on its availability and lead time:
 Scarce inventory is imported and has a longer lead time, making it harder to acquire. This inventory is critical to the business and its scarcity can lead to delays and disruptions in operations.
 Difficult inventory is still important to the business, but it requires more effort and time to secure. This inventory has a lead time of over 14 days but less than 6 months.
 Easily available inventory is readily accessible and can be quickly obtained. This inventory is usually less critical to the business and can be easily replaced or substituted.
