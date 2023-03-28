@@ -68,6 +68,8 @@ ABC Analysis = IF(Stock[Cumulative Shares]<=70,"A [High]", IF(Stock[Cumulative S
 
 ABC Rank = RANK.EQ(Stock[Cumulative Shares],Stock[Cumulative Shares],ASC)
 
+![Parito Example of ABC Analysis](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Parito%20example-%20ABC%20Analysis.png)
+
 #### Inventory Turn Over Ratio
 
 A ratio that measures the number of times inventory is sold and replaced over a period of time. It's calculated as Cost of Goods Sold (COGS) divided by Average Inventory.
