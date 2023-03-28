@@ -97,11 +97,14 @@ Peak Weakly Demands = CALCULATE(
  
 
 
-#### Reorder Level 
+### Reorder Level 
 
 ReOrder Points = Stock[Safety Stock] +(Stock[Average Weekly Demonds] * Stock[Average Lead Time (days)]/7)
 
-#### Stock Status 
+![](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Reorder%20Level.png)
+
+
+### Stock Status 
 
 Stock Status = IF(Stock[Current Stock Quantity] = 0, "Out of Stock",IF(Stock[Need for Order]= "YES","Below Reorder Points","In Stock"))
 
