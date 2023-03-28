@@ -67,3 +67,42 @@ Cumulative Shares = CALCULATE(
 ABC Analysis = IF(Stock[Cumulative Shares]<=70,"A [High]", IF(Stock[Cumulative Shares]<=90,"B [Medium]","C [Less]"))
 
 ABC Rank = RANK.EQ(Stock[Cumulative Shares],Stock[Cumulative Shares],ASC)
+
+#### Inventory Turn Over Ratio
+
+A ratio that measures the number of times inventory is sold and replaced over a period of time. It's calculated as Cost of Goods Sold (COGS) divided by Average Inventory.
+
+Value in WH = Stock[Current Stock Quantity]*Stock[Unit Price]
+
+Inventory TurnOver Ratio = SUM(Stock[Annual Revenue])/SUM(Stock[Value in WH])
+
+#### Safety Stock Level 
+
+Peak Weakly Demands = CALCULATE(
+    MAX('Weekly Demond Sheet'[Weekly Demonds]),
+    Filter('Weekly Demond Sheet',
+    'Weekly Demond Sheet'[SKU ID]=Stock[SKU ID]))
+    
+ Average Weekly Demonds = CALCULATE(
+    AVERAGE('Weekly Demond Sheet'[Weekly Demonds]),
+    FILTER('Weekly Demond Sheet',
+    'Weekly Demond Sheet'[SKU ID]=Stock[SKU ID]))
+    
+ Safety Stock = (Stock[Peak Weakly Demands] * Stock[Maximum Lead Time (days)]/7)-(Stock[Average Weekly Demonds] * Stock[Average Lead Time (days)]/7)
+ 
+
+
+#### Reorder Level 
+
+ReOrder Points = Stock[Safety Stock] +(Stock[Average Weekly Demonds] * Stock[Average Lead Time (days)]/7)
+
+#### Stock Status 
+
+Stock Status = IF(Stock[Current Stock Quantity] = 0, "Out of Stock",IF(Stock[Need for Order]= "YES","Below Reorder Points","In Stock"))
+
+#### VED Analysis
+
+CV Rank = RANK.EQ(Stock[coefficient of variation],Stock[coefficient of variation],1)
+
+XYZ ? = if(Stock[CV Rank]<=0.2*MAX(Stock[CV Rank]),"X [uniform Demond]", if(Stock[CV Rank]<=0.5*MAX(Stock[CV Rank]),"Y [Variable Demond]",
+" Z [Uncertain Demonds]"))
