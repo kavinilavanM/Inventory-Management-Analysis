@@ -78,6 +78,8 @@ Value in WH = Stock[Current Stock Quantity]*Stock[Unit Price]
 
 Inventory TurnOver Ratio = SUM(Stock[Annual Revenue])/SUM(Stock[Value in WH])
 
+![INVENTORY TURNOVER RATIO](https://github.com/kavinilavanM/Inventory-Management-Analysis/blob/main/Inventory%20turn%20over%20ratio.png)
+
 #### Safety Stock Level 
 
 Peak Weakly Demands = CALCULATE(
